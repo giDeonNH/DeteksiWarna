@@ -6,9 +6,10 @@ document.getElementById("usernameDisplay").textContent = `Hello, ${userName}!`;
 document.getElementById("exitButton").addEventListener("click", function () {
   const confirmExit = confirm("Apakah Anda yakin ingin keluar?");
   if (confirmExit) {
-    window.location.href = "https://gideonnh.github.io/DeteksiWarna/";
+    window.close();
   }
 });
+
 
 
 let video = document.getElementById("video");
