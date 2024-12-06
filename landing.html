@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="icon.png" />
+    <title>Deteksi Warna</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: url(bg.jpg);
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+      }
+      .container {
+        position: relative;
+        background: transparent;
+        padding: 20px;
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        border-radius: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        backdrop-filter: blur(15px);
+      }
+      h1 {
+        font-size: 24px;
+        color: #fff;
+        margin-bottom: 20px;
+      }
+      input[type="text"] {
+        width: 100%;
+        height: 50px;
+        background: transparent;
+        border: none;
+        outline: none;
+        font-size: 1em;
+        color: #fff;
+        border-bottom: 2px solid #fff;
+        margin-bottom: 10px;
+      }
+      button {
+        width: 100%;
+        height: 40px;
+        padding: 10px;
+        background: #fff;
+        border: none;
+        outline: none;
+        border-radius: 40px;
+        cursor: pointer;
+        font-size: 1em;
+        color: #000;
+        font-weight: 500;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Masukkan Nama untuk Mulai</h1>
+      <form id="nameForm">
+        <input type="text" id="username" placeholder="Nama" required />
+        <button type="submit">Mulai</button>
+      </form>
+    </div>
+
+    <script>
+      document
+        .getElementById("nameForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          const username = document.getElementById("username").value.trim();
+          if (username.length >= 3) {
+            window.location.href = `index.html?name=${encodeURIComponent(
+              username
+            )}`;
+          } else {
+            alert("Name must be at least 3 characters long");
+          }
+        });
+    </script>
+  </body>
+</html>

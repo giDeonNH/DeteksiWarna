@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="icon.png" />
+    <title>Deteksi Warna</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: url(bg.jpg);
+        background-size: cover;
+        background-position: center;
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        color: white;
+        text-align: center;
+        padding: 10px;
+      }
+
+      .contaier {
+        display: flexbox;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+      }
+
+      .canvas-container {
+        position: relative;
+        max-width: 90vw;
+        max-height: 90vh;
+      }
+
+      canvas {
+        display: flex;
+        width: 100%;
+        height: auto;
+        border-radius: 0px;
+      }
+
+      .exit-button {
+        width: 20%;
+        height: 40px;
+        padding: 10px;
+        background: #fff;
+        border: none;
+        outline: none;
+        border-radius: 40px;
+        cursor: pointer;
+        font-size: 1em;
+        color: #000;
+        font-weight: 500;
+      }
+
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 1.5rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        h1 {
+          font-size: 1.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        <div class="username" id="usernameDisplay"></div>
+        <br />Selamat Datang di Aplikasi Deteksi Warna
+      </h1>
+      <div class="canvas-container">
+        <canvas id="canvas" width="720" height="680"></canvas>
+      </div>
+      <button id="exitButton" class="exit-button">Keluar</button>
+    </div>
+    <video
+      id="video"
+      width="640"
+      height="480"
+      autoplay
+      style="display: none"
+    ></video>
+    <script async src="https://docs.opencv.org/4.x/opencv.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
