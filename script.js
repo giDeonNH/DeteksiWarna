@@ -6,7 +6,7 @@ document.getElementById("usernameDisplay").textContent = `Hello, ${userName}!`;
 document.getElementById("exitButton").addEventListener("click", function () {
   const confirmExit = confirm("Apakah Anda yakin ingin keluar?");
   if (confirmExit) {
-    window.location.href = "landing.html"; // Alihkan ke halaman landing atau homepage
+    window.location.href = "index.html"; // Alihkan ke halaman landing atau homepage
   }
 });
 
