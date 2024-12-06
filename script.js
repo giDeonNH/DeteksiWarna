@@ -6,11 +6,10 @@ document.getElementById("usernameDisplay").textContent = `Hello, ${userName}!`;
 document.getElementById("exitButton").addEventListener("click", function () {
   const confirmExit = confirm("Apakah Anda yakin ingin keluar?");
   if (confirmExit) {
-    window.close(); // Menutup tab (tidak selalu berfungsi di beberapa browser)
-  } else {
-    window.location.href = "landing.html"; // Alihkan ke halaman exit atau homepage
+    window.location.href = "landing.html"; // Alihkan ke halaman landing atau homepage
   }
 });
+
 
 let video = document.getElementById("video");
 let canvas = document.getElementById("canvas");
